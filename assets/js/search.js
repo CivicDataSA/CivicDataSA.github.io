@@ -5,7 +5,7 @@ function search(query) {
     (item.title && item.title.toLowerCase().includes(q)) ||
     (item.desc && item.desc.toLowerCase().includes(q)) ||
     (item.tag && item.tag.toLowerCase().includes(q)) ||
-    (item.tags && item.tags.some(t => t.toLowerCase().includes(q)))
+    (item.tags && item.tags.some(t => String(t).toLowerCase().includes(q)))
   );
 }
 

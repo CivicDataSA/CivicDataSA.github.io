@@ -17,7 +17,7 @@ github: https://github.com/CivicDataSA/VIAService
 search_tags: [transportation, via, spatial, transit]
 ---
 
-San Antonio's relationship with its bus system is complicated. Ask a rider and you'll often hear frustration — late buses, long waits, service that feels unpredictable. But frustration and data don't always tell the same story.
+San Antonio's relationship with its bus system is complicated. Ask a rider and you'll often hear frustration: late buses, long waits, service that feels unpredictable. But frustration and data don't always tell the same story.
 
 This analysis looks at one week of real-time vehicle position data — November 17 through November 23, 2025 — compared against VIA's published schedule. We focused on the five routes with the highest number of weekly trips, since those routes move the most people and their reliability matters most to daily riders.
 
@@ -68,7 +68,7 @@ This analysis looks at one week of real-time vehicle position data — November 
 </script>
 </div>
 
-Across all five routes, on-time performance was broadly consistent — and better than the public narrative might suggest. Four of the five routes cleared 82%, and none fell below 80%. The average deviation from schedule was under two minutes. That doesn't mean every trip runs smoothly. A bus seven minutes late at a transfer point can still mean a missed connection and a long wait. Schedule adherence is one measure, not the full picture of a rider's experience.
+Across all five routes, on-time performance was broadly consistent and better than the public narrative might suggest. Four of the five routes cleared 82%, and none fell below 80%. The average deviation from schedule was under two minutes. That doesn't mean every trip runs smoothly. A bus seven minutes late at a transfer point can still mean a missed connection and a long wait. Schedule adherence is one measure, not the full picture of a rider's experience.
 
 VIA is in the middle of an ambitious effort to improve. <a href="https://www.viainfo.net/2025/03/05/approved_improvements/" target="_blank" rel="noopener">Ridership has grown more than 27% since 2021</a>, and the agency's Better Bus Plan targets wait times of 30 minutes or less across the network. The <a href="https://www.tpr.org/podcast/the-source/2025-07-16/via-focuses-on-improving-service-with-frequency-and-growing-ridership" target="_blank" rel="noopener">Green Line — San Antonio's first Advanced Rapid Transit corridor along San Pedro Avenue — broke ground in June 2025</a> and is set to open in 2027. Delivering reliable service on a bus network operating across a sprawling, car-oriented city is genuinely hard, and the data suggests the core routes are holding up reasonably well while that longer-term work unfolds.
 

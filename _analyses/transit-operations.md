@@ -15,7 +15,7 @@ methods:
 search_tags: [transit, VIA, CapMetro, NTD, ridership, farebox, cost per rider, public transit, Austin, San Antonio]
 ---
 
-Transit in San Antonio is funded largely by local sales tax — meaning every resident pays into the system whether they ride or not. That makes efficiency not just an operational question but a civic one. How well is that public money actually working?
+Transit in San Antonio is funded largely by local sales tax, meaning every resident pays into the system whether they ride or not. That makes efficiency not just an operational question but a civic one. How well is that public money actually working?
 
 To answer that question, this analysis pulls National Transit Database figures for VIA Metropolitan Transit and Austin's Capital Metro from 2019 through 2024, across four metrics: what share of costs fares cover, how much it costs to move one rider, how well each system fills its service with actual passengers, and how ridership has recovered from the pandemic collapse.
 

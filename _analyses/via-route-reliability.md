@@ -4,7 +4,7 @@ title: "How Consistent Is VIA Service on San Antonio's Busiest Routes?"
 date: 2026-03-29
 description: "One week of real-time GTFS data across VIA's five highest-frequency routes — and what it suggests about daily service reliability."
 tag: Transportation
-github: https://github.com/CivicDataSA
+github: https://github.com/CivicDataSA/VIAService
 findings:
   - All five routes exceeded 80% on-time performance during the study period
   - Four of five routes cleared 82%, clustering closely together
@@ -13,7 +13,7 @@ methods:
   - VIA GTFS-RT vehicle position feed
   - GTFS static schedule (Nov 2025)
   - On-time defined as arrival within 5 minutes of schedule
-github: https://github.com/lizob
+github: https://github.com/CivicDataSA/VIAService
 search_tags: [transportation, via, spatial, transit]
 ---
 

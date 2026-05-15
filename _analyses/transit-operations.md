@@ -4,7 +4,7 @@ title: "San Antonio Moves More Riders for Less Money"
 description: "Using National Transit Database data from 2019–2024, this analysis compares VIA Metropolitan Transit and Austin's CapMetro across four performance metrics: farebox recovery, cost per rider, riders per revenue mile, and ridership recovery."
 tag: Transit
 date: 2026-04-03
-github: https://github.com/CivicDataSA
+github: https://github.com/CivicDataSA/VIAOperations
 findings:
   - VIA moved 30.7 million riders in 2024 at $8.55 per trip — CapMetro moved fewer riders at $14.75
   - The cost per rider gap has widened every year since 2020, reaching nearly $6 in 2024

@@ -4,7 +4,7 @@ title: "Who Waits Longest for City Services?"
 description: "An analysis of 500K+ 311 service requests finds that San Antonio's lower-income council districts wait longer for city responses — and file more requests to begin with."
 tag: City Services
 date: 2026-03-18
-github: https://github.com/CivicDataSA
+github: https://github.com/CivicDataSA/311ServiceRequests
 findings:
   - District 2 filed 57,431 requests — the most of any district — with the lowest median income
   - 17.6% of all requests citywide were closed late
@@ -13,7 +13,7 @@ methods:
   - 311 records from Open Data SA
   - Income from ACS 5-Year Estimates
   - Matched to council districts via zip code
-github: https://github.com
+github: https://github.com/CivicDataSA/311ServiceRequests
 search_tags: [311, council district, census, spatial, income, neighborhood, housing]
 ---
 

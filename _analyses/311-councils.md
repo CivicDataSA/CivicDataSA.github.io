@@ -21,15 +21,15 @@ San Antonio processes hundreds of thousands of 311 requests every year: potholes
 
 The answer is yes.
 
-Across San Antonio's 10 council districts, median household income is a consistent predictor of how quickly the city closes a service request. The lowest-income districts wait the longest. The wealthiest districts wait the least — and file fewer requests to begin with.
+Across San Antonio's 10 council districts, median household income is a consistent predictor of how quickly the city closes a service request. The lowest-income districts wait the longest. The wealthiest districts wait the least and file fewer requests to begin with.
 
 <img src="{{ site.baseurl }}/assets/images/sa_311_basemap.png" alt="Choropleth map of average 311 resolution time by council district" style="width:75%; display:block; margin: 1.5rem auto;">
 
-The pattern is geographic and hard to dismiss. The inner south and east sides — Districts 2, 3, and 5 — are consistently the darkest on the map. Districts 8, 9, and 10 in the north are the lightest.
+The pattern is geographic and hard to dismiss. The inner south and east sides, Districts 2, 3, and 5, are consistently the darkest on the map. Districts 8, 9, and 10 in the north are the lightest.
 
 ## The numbers
 
-District 2 filed more 311 requests than any other district — 57,431 between February 2022 and December 2025 — while averaging over 25 days to close them. District 10, with a median household income nearly $30,000 higher, closes requests in under 15 days on average. Each bubble is a council district. Size and color reflect total request volume, from yellow (highest) to blue (lowest). As income rises, resolution time falls. The city's wealthiest districts not only wait less, they ask for less.
+District 2 filed more 311 requests than any other district (57,431 between February 2022 and December 2025) while averaging over 25 days to close them. District 10, with a median household income nearly $30,000 higher, closes requests in under 15 days on average. Each bubble is a council district. Size and color reflect total request volume, from yellow (highest) to blue (lowest). As income rises, resolution time falls. The city's wealthiest districts not only wait less, they ask for less.
 
 The pattern holds across the board but not always for the same reasons.
 
@@ -39,7 +39,7 @@ Citywide, 17.6% of all requests were closed late. Some categories are slow regar
 
 ## Digging deeper into Districts 2 and 5
 
-Districts 2 and 5 both sit in the darker end of the map, but they got there differently. D2 and D5 file nearly identical volumes of the city's hardest request types — homeless encampments, sanitation complaints, encampment abatement. But D2 resolves them more slowly. Homeless encampment requests take 49.5 days in D2 versus 42 in D5. Homeless outreach takes 474 days in D2 — more than three times D5's 147.
+Districts 2 and 5 both sit in the darker end of the map, but they got there differently. D2 and D5 file nearly identical volumes of the city's hardest request types — homeless encampments, sanitation complaints, encampment abatement. But D2 resolves them more slowly. Homeless encampment requests take 49.5 days in D2 versus 42 in D5. Homeless outreach takes 474 days in D2, which is more than three times D5's 147.
 
 | Request Type | D2 requests | D5 requests | D10 requests | D2 median days | D5 median days | D10 median days |
 |---|---:|---:|---:|---:|---:|---:|

@@ -23,7 +23,7 @@ The headline finding is straightforward: VIA moves more riders at lower cost. Wh
 
 ## Efficiency
 
-In 2024, VIA moved roughly 30.7 million riders at $8.55 per trip. CapMetro moved 26.5 million at $14.75 — nearly double. That gap has widened every year since 2020 and is the most direct measure of what each agency extracts from its operating budget.
+In 2024, VIA moved roughly 30.7 million riders at $8.55 per trip. By comparison, CapMetro moved 26.5 million at $14.75, which is nearly double VIA's cost. That gap has widened every year since 2020 and is the most direct measure of what each agency extracts from its operating budget.
 
 Some of CapMetro's rising costs reflect deliberate investment. Project Connect, Austin's multibillion-dollar transit expansion, has added service and infrastructure ahead of the ridership growth it's designed to attract. This isn't a sign of mismanagement, but rather a deliberate allocation of resources toward long-term infrastructure goals. But it does mean Austin residents are currently paying more per ride, with the payoff still pending.
 
@@ -40,7 +40,7 @@ Part of that drop has a specific, documented cause. In 2024, CapMetro experience
 ![VIA vs CapMetro system performance charts showing farebox recovery, cost per trip, riders per revenue mile, and ridership recovery 2019–2024]({{ site.baseurl }}/assets/images/ntd_comparison.png)
 *National Transit Database, 2019–2024. VIA Metropolitan Transit and Capital Metropolitan Transportation Authority.*
 
-Neither system has returned to 2019 ridership levels. VIA carried 72% of its pre-pandemic trips in 2024; CapMetro reached 85%. That gap matters because pre-pandemic ridership represents the baseline of what normal transit demand looked like — the riders who built their lives around the system. At 72%, VIA still has roughly 11 million annual trips that existed in 2019 and don't today. Those aren't just statistics; they're commuters, students, and essential workers who used to ride and don't anymore.
+Neither system has returned to 2019 ridership levels. VIA carried 72% of its pre-pandemic trips in 2024; CapMetro reached 85%. That gap matters because pre-pandemic ridership represents the baseline of what normal transit demand looked like: the riders who built their lives around the system. At 72%, VIA still has roughly 11 million annual trips that existed in 2019 and don't today. Those aren't just statistics; they're commuters, students, and essential workers who used to ride and don't anymore.
 
 Austin's faster recovery likely reflects its [population and employment boom](https://communityimpact.com/austin/south-central-austin/government/2025/03/17/austin-metro-grows-to-25th-most-populous-in-us-with-more-than-25m-residents/) over this period. The Austin-Round Rock metro grew at a pace San Antonio didn't match through most of this window, bringing new residents who arrived without car-dependent habits already established. VIA's slower recovery may say less about the quality of the system and more about the pace of San Antonio's growth and the depth of car dependence in its existing population.
 
@@ -48,4 +48,4 @@ In absolute terms, VIA still serves more riders. That it does so at lower cost p
 
 ## A note on comparisons
 
-NTD data is self-reported and reflects differences in accounting practices, service structures, and fiscal year timing. VIA and CapMetro operate in meaningfully different urban contexts — density, land use, and car ownership rates all affect both ridership potential and operating costs in ways this analysis doesn't fully capture. These numbers describe what each system produced, not the ceiling of what each system could produce.
+NTD data is self-reported and reflects differences in accounting practices, service structures, and fiscal year timing. VIA and CapMetro operate in meaningfully different urban contexts: density, land use, and car ownership rates all affect both ridership potential and operating costs in ways this analysis doesn't fully capture. These numbers describe what each system produced, not the ceiling of what each system could produce.

@@ -39,7 +39,7 @@ Citywide, 17.6% of all requests were closed late. Some categories are slow regar
 
 ## Digging deeper into Districts 2 and 5
 
-Districts 2 and 5 both sit in the darker end of the map, but they got there differently. D2 and D5 file nearly identical volumes of the city's hardest request types — homeless encampments, sanitation complaints, encampment abatement. But D2 resolves them more slowly. Homeless encampment requests take 49.5 days in D2 versus 42 in D5. Homeless outreach takes 474 days in D2, which is more than three times D5's 147.
+Districts 2 and 5 both sit in the darker end of the map, but they got there differently. D2 and D5 file nearly identical volumes of the city's hardest request types: homeless encampments, sanitation complaints, encampment abatement. But D2 resolves them more slowly. Homeless encampment requests take 49.5 days in D2 versus 42 in D5. Homeless outreach takes 474 days in D2, which is more than three times D5's 147.
 
 | Request Type | D2 requests | D5 requests | D10 requests | D2 median days | D5 median days | D10 median days |
 |---|---:|---:|---:|---:|---:|---:|

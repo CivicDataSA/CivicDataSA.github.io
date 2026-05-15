@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap');
+
+.stat-wrap {
+  display: flex;
+  gap: 16px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  .stat-card {
+    flex: 1;
+    padding: 28px 24px 24px;
+    border-radius: 2px;
+    border-top: 3px solid;
+    background: #F5F0E8;
+
+    &.low  { border-color: #3d6b35; }
+    &.high { border-color: #8B2E0F; }
+  }
+
+  .stat-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #6b6560;
+    margin-bottom: 14px;
+  }
+
+  .stat-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  // Coloring the numbers based on the card type
+  .stat-card.low & .stat-number { color: #3d6b35; } 
+  .stat-card.high & .stat-number { color: #8B2E0F; }
+
+  .stat-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #4a4540;
+    line-height: 1.5;
+  }
+}
+
+.stat-explainer {
+  max-width: 680px;
+  margin: 16px auto 0;
+  font-family: 'Source Serif 4', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #6b6560;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .stat-wrap { 
+    flex-direction: column; 
+    .stat-number { font-size: 52px; }
+  }

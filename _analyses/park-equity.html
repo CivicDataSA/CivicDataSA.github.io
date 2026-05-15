@@ -1,0 +1,301 @@
+---
+layout: analysis
+title: Park Access in Bexar County
+description: An analysis of 1,100+ block groups finds that only 55% of Bexar County residents can walk to a park — and that lower-income neighborhoods actually have nearly twice the access of wealthier ones.
+date: 2026-03-01
+tag: Housing and Land
+findings:
+  - 55% of Bexar County residents can walk to a park
+  - Lower-income neighborhoods have nearly 2x the access of higher-income ones
+  - Park deserts cluster in commercial corridors, new suburbs, and dense historic areas
+
+methods:
+  - 1,100+ neighborhoods across Bexar County
+  - Park data from SA Open Data portal
+  - Income from ACS 5-year estimates
+github: https://github.com
+search_tags: [equity, parks, geopandas, census, spatial, green space, neighborhood, housing]
+---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+ 
+<style>
+  #park-map {
+    width: 100%;
+    height: 560px;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    background: #e8e4dc;
+  }
+ 
+  .map-legend {
+    background: #F5F0E8;
+    border: 1px solid #c8bfa8;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+  .map-legend strong {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b6560;
+    margin-bottom: 6px;
+  }
+  .legend-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
+  }
+  .legend-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    border: 0.5px solid rgba(0,0,0,0.1);
+  }
+  .legend-rural {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    background: #d4cfc7;
+    border: 0.5px solid rgba(0,0,0,0.1);
+  }
+ 
+  .leaflet-popup-content-wrapper {
+    background: #F5F0E8;
+    border: 1px solid #c8bfa8;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    font-family: 'Outfit', sans-serif;
+  }
+  .leaflet-popup-tip {
+    background: #F5F0E8;
+  }
+  .popup-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b6560;
+    margin-bottom: 2px;
+  }
+  .popup-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  .popup-value.big {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .popup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #c8bfa8;
+  }
+  .popup-quartile {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+  .q1 { background: #e8f0e5; color: #3d6b35; }
+  .q2 { background: #eef3e8; color: #4a7a40; }
+  .q3 { background: #f5ede8; color: #8B4513; }
+  .q4 { background: #f5e8e5; color: #8B2E0F; }
+
+  .leaflet-overlay-pane svg {
+  overflow: visible !important;
+}
+
+.leaflet-overlay-pane path {
+  fill-opacity: 0.75 !important;
+  stroke: #ffffff !important;
+  stroke-width: 0.8 !important;
+}
+
+</style>
+
+On a July afternoon in San Antonio, the difference between a neighborhood with a park and one without isn't a statistic. It's whether your kids have somewhere to play outside. It's whether you take a walk after dinner or stay inside. It's whether your street has anywhere to breathe.
+<p style="margin-bottom: 1.0rem;"></p>
+I live across the street from a park, and I notice the way proximity makes going outside feel like a natural choice rather than an errand. That's not just intuition. <a href="https://news.stanford.edu/stories/2025/11/access-urban-parks-greater-physical-activity-us-cities-research" target="_blank">Research from Stanford's Natural Capital Project</a> found that higher park accessibility, not simply more greenery in general, is a strong predictor of daily physical activity, with a 10% increase in accessibility corresponding to roughly 107 additional steps per day. Separately, <a href="https://www.deltastate.edu/PDFFiles/hper%20outdoor%20program/benefits%20of%20PA%20provided%20by%20P&R%20services.pdf" target="_blank">studies consistently show</a> that people within walking distance of a park are more likely to use it than those who are not. This means the walk itself isn't just the means of getting there, it's part of the benefit. When a park requires a car, that friction is enough to keep many people home.
+<p style="margin-bottom: 1.0rem;"></p>
+We mapped every public park in Bexar County to answer a single question: can you get there on foot?
+<br>
+<br>
+<img src="{{ site.baseurl }}/assets/images/parks_choropleth.png" alt="Park access map" style="width: 60%; display: block; margin: 0 auto;">
+
+<br>
+For <strong>45% of Bexar County residents,</strong> the answer is no.
+
+We defined walking distance as 10 minutes, roughly half a mile, across more than 1,100 neighborhoods. What we found wasn't just about where parks exist, it was about who they were built for.
+<br>
+<br>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/parks.css">
+
+{% include stat-callout.html %}
+
+<br>
+Lower-income neighborhoods average 78% park access. Higher-income neighborhoods average just 40%. The gap traces back to history: San Antonio's older core was built with public parks deliberately woven in. Newer developments on the edges were designed around private amenities — pools, large lots, gated greenways — that serve residents only. Public green space was built where it was needed most, and newer growth largely opted out.
+{% include park-inset-maps.html %}
+
+The map reveals three kinds of places where that pattern still shows up today: commercial corridors with thousands of daily visitors and almost no public green space; fast-growing suburbs where development is outpacing infrastructure; and dense historic neighborhoods where every lot is full and a traditional park simply won't fit. These aren't just data points — they're the places where targeted investment would make the biggest difference. Knowing where the gaps are is the first step to closing them.
+<br>
+<br>
+<div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 1rem; background: var(--bg-alt); border-left: 3px solid var(--blue); border-radius: 0 4px 4px 0; margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--ink-muted);">
+  <span>Click any neighborhood to see park access, income, and population data</span>
+</div>
+
+<div id="park-map"></div>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
+
+<script>
+  // Setup Projection Definitions
+  const statePlane = "+proj=lcc +lat_1=28.38333333333333 +lat_2=30.28333333333334 +lat_0=27.83333333333333 +lon_0=-99 +x_0=600000 +y_0=3999999.999999999 +ellps=GRS80 +units=us-ft +no_defs";
+  const wgs84 = "EPSG:4326";
+
+  const map = L.map('park-map', {
+    center: [29.4241, -98.4936],
+    zoom: 11,
+    zoomControl: true,
+    scrollWheelZoom: false
+  });
+ 
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+ 
+  function getColor(pct) {
+    if (pct >= 0.8) return '#3d6b35';
+    if (pct >= 0.6) return '#6a9e45';
+    if (pct >= 0.4) return '#c8a84b';
+    if (pct >= 0.2) return '#c05a2a';
+    return '#8B2E0F';
+  }
+ 
+  function formatPct(val) { return Math.round(val * 100) + '%'; }
+  function formatIncome(val) { return (!val || val <= 0) ? 'N/A' : '$' + Math.round(val).toLocaleString(); }
+  function quartileLabel(q) {
+    const labels = { 'Q1': 'Lowest income', 'Q2': 'Lower-mid income', 'Q3': 'Upper-mid income', 'Q4': 'Highest income' };
+    return labels[q] || 'Income N/A';
+  }
+ 
+  fetch('{{ site.baseurl }}/assets/data/neighborhoods.geojson')  
+    .then(r => r.json())
+    .then(data => {
+      // Coordinate transformation for State Plane to WGS84
+      data.features.forEach(feature => {
+        if (feature.geometry.type === "Polygon") {
+          feature.geometry.coordinates = feature.geometry.coordinates.map(ring => 
+            ring.map(coord => proj4(statePlane, wgs84, coord))
+          );
+        } else if (feature.geometry.type === "MultiPolygon") {
+          feature.geometry.coordinates = feature.geometry.coordinates.map(poly => 
+            poly.map(ring => ring.map(coord => proj4(statePlane, wgs84, coord)))
+          );
+        }
+      });
+
+      const urban = { type: 'FeatureCollection', features: data.features.filter(f => f.properties.pop_density > 1000) };
+      const rural = { type: 'FeatureCollection', features: data.features.filter(f => f.properties.pop_density <= 1000) };
+
+      // Rural Layer
+      L.geoJSON(rural, {
+        style: { fillColor: '#d4cfc7', fillOpacity: 0.5, color: '#bfbab2', weight: 0.5 }
+      }).addTo(map);
+
+      let selected = null;
+
+      // Urban Layer
+      const urbanLayer = L.geoJSON(urban, {
+        style: f => ({
+          fillColor: getColor(f.properties.pct_park_access),
+          fillOpacity: 0.75,
+          color: '#ffffff',
+          weight: 0.8
+        }),
+        onEachFeature: (feature, layer) => {
+          const p = feature.properties;
+          const q = p.income_quartile || '';
+          
+          const popupContent = `
+            <div style="min-width:220px; padding: 4px 2px;">
+              <div class="popup-label">Tract ${p.TRACTCE || 'N/A'}, Block Group ${p.BLKGRPCE || 'N/A'}</div>
+              <div class="popup-value big" style="color:${getColor(p.pct_park_access)}">${formatPct(p.pct_park_access)}</div>
+              <div class="popup-label" style="margin-bottom:8px">have park access</div>
+              <span class="popup-quartile ${q.toLowerCase()}">${quartileLabel(q)}</span>
+              <div class="popup-grid">
+                <div>
+                  <div class="popup-label">Median income</div>
+                  <div class="popup-value">${formatIncome(p.median_hh_income)}</div>
+                </div>
+                <div>
+                  <div class="popup-label">Population</div>
+                  <div class="popup-value">${p.total_population ? Math.round(p.total_population).toLocaleString() : 'N/A'}</div>
+                </div>
+              </div>
+              <div style="border-top: 1px solid #c8bfa8; margin-top: 10px; padding-top: 8px;">
+                 <div class="popup-label">Median Age</div>
+                 <div class="popup-value">${p.median_age ? Math.round(p.median_age) : 'N/A'} years old</div>
+              </div>
+            </div>
+          `;
+
+          layer.bindPopup(popupContent, { maxWidth: 280 });
+
+          layer.on({
+            mouseover: function() {
+              if (selected !== this) this.setStyle({ weight: 2, color: '#333', fillOpacity: 0.9 });
+            },
+            mouseout: function() {
+              if (selected !== this) urbanLayer.resetStyle(this);
+            },
+            click: function() {
+              if (selected && selected !== this) urbanLayer.resetStyle(selected);
+              selected = this;
+              this.setStyle({ weight: 2.5, color: '#1a1a1a', fillOpacity: 1 });
+              this.openPopup();
+            }
+          });
+        }
+      }).addTo(map);
+
+      // Legend
+      const legend = L.control({ position: 'bottomright' });
+      legend.onAdd = () => {
+        const div = L.DomUtil.create('div', 'map-legend');
+        div.innerHTML = `
+          <strong>Park access</strong>
+          <div class="legend-row"><div class="legend-swatch" style="background:#3d6b35"></div> 80–100%</div>
+          <div class="legend-row"><div class="legend-swatch" style="background:#6a9e45"></div> 60–80%</div>
+          <div class="legend-row"><div class="legend-swatch" style="background:#c8a84b"></div> 40–60%</div>
+          <div class="legend-row"><div class="legend-swatch" style="background:#c05a2a"></div> 20–40%</div>
+          <div class="legend-row"><div class="legend-swatch" style="background:#8B2E0F"></div> 0–20%</div>
+          <div class="legend-row" style="margin-top:6px"><div class="legend-rural"></div> Rural / low density</div>
+        `;
+        return div;
+      };
+      legend.addTo(map);
+    });
+</script>

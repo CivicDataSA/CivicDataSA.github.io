@@ -1,0 +1,27 @@
+---
+layout: default
+title: Analyses
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Analyses</h1>
+    <p class="page-sub">All open civic data analyses for San Antonio.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% assign sorted = site.analyses | sort: 'date' | reverse %}
+      {% for analysis in sorted %}
+      <a href="{{ site.baseurl }}{{ analysis.url }}" class="analysis-card">
+        {% if analysis.tag %}<div class="card-tag">{{ analysis.tag }}</div>{% endif %}
+        <h3 class="card-title">{{ analysis.title }}</h3>
+        <p class="card-desc">{{ analysis.description }}</p>
+        <span class="card-cta">View Analysis →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

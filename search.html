@@ -1,0 +1,38 @@
+---
+layout: default
+title: Search
+permalink: /search/
+extra_js: search.js
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Search</h1>
+    <p class="page-sub">Search across analyses, datasets, and findings.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 720px;">
+    <div class="search-box">
+      <input type="text" id="search-input" class="search-input" placeholder="Try: park access, transit, equity..." autocomplete="off" />
+      <button class="search-btn" id="search-btn">Search</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</section>
+
+<script>
+  window.SITE_BASEURL = "{{ site.baseurl }}";
+  window.ANALYSES = [
+    {% for analysis in site.analyses %}
+    {
+      title: {{ analysis.title | jsonify }},
+      desc: {{ analysis.description | jsonify }},
+      tag: {{ analysis.tag | jsonify }},
+      url: "{{ site.baseurl }}{{ analysis.url }}",
+      tags: {{ analysis.search_tags | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+</script>

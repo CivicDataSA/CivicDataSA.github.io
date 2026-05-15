@@ -1,0 +1,26 @@
+title: CivicData SA
+description: Open civic analyses on transit, equity, and urban life in San Antonio.
+baseurl: "/civicdatasa"
+url: ""
+
+collections:
+  analyses:
+    output: true
+    permalink: /analyses/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: analyses
+    values:
+      layout: analysis
+
+markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+  
+plugins:
+  - jekyll-feed
+
+

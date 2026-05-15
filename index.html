@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">San Antonio, Texas</p>
+    <h1 class="hero-title">Data in service<br><em>of the city</em></h1>
+    <p class="hero-sub">Clear insights on how San Antonio is growing and changing—built to help residents stay informed and engaged.</p>
+    <div class="hero-actions">
+      <a href="{{ site.baseurl }}/analyses/" class="btn btn-primary">Explore Analyses</a>
+      <a href="{{ site.baseurl }}/search/" class="btn btn-outline">Search Data</a>
+    </div>
+  </div>
+  <div class="hero-bar"></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest Analyses</h2>
+    <div class="card-grid">
+      {% assign sorted = site.analyses | sort: 'date' | reverse %}
+      {% for analysis in sorted %}
+      <a href="{{ site.baseurl }}{{ analysis.url }}" class="analysis-card">
+        {% if analysis.tag %}<div class="card-tag">{{ analysis.tag }}</div>{% endif %}
+        <h3 class="card-title">{{ analysis.title }}</h3>
+        <p class="card-desc">{{ analysis.description }}</p>
+        <span class="card-cta">View Analysis →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split">
+    <div class="split-text">
+      <h2 class="section-title">Why this exists</h2>
+      <p>Public data about our city should be as accessible as it is transparent. CivicData SA takes complex datasets—from housing trends to transit reliability—and turns them into neighborhood-level answers.</p>
+      <p>Whether you are looking for a new place to live, advocating for better services, or simply curious about how San Antonio is changing, this site provides the clear, actionable insights you need to stay informed and engaged.</p>
+      <a href="{{ site.baseurl }}/about/" class="btn btn-outline" style="margin-top:1.5rem;">About the project →</a>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-num">1.4M</span>
+        <span class="stat-label">San Antonio residents</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">San Antonio</span>
+        <span class="stat-label">One city, deep focus</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">Weekly</span>
+        <span class="stat-label">New analyses added</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">Open</span>
+        <span class="stat-label">All data & code public</span>
+      </div>
+    </div>
+  </div>
+</section>

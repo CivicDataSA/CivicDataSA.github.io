@@ -8,15 +8,12 @@ github: https://github.com/CivicDataSA/sa-traffic-capacity
 findings:
   - All 10 San Antonio segments on TxDOT's 2025 Top 100 Most Congested Roadways list are over capacity
   - San Antonio lost 39 million hours to traffic delays in 2025, ranking 10 segments among the state's worst
-  - IH 35 carries 54–60% more traffic than it was built for; relief projects won't finish until 2029–2030
-  - The two Connally Loop segments on IH 410 are significantly over capacity with no active TxDOT project
-  - Culebra and Potranco have similar V/C ratios but Culebra ranks far worse on delay, signal density amplifies the same structural overload into disproportionate lost time
+  - IH 35 carries 54–60% more traffic than it was built for
+  - Culebra and Potranco have similar V/C ratios but Culebra ranks far worse on delay
 methods:
-  - TxDOT AADT Traffic Monitoring Program (2025), nearest-station spatial join per Top 100 segment (EPSG:2278)
-  - Lane counts from TxDOT Roadway Inventory (2024), KG mainlane roadbed, Bexar County median per route
-  - Capacity estimated at 19,000 vehicles/lane/day for freeways, 9,000 for arterials (HCM Level of Service D)
-  - IH 410 AADT manually verified using ZLEVEL 8 mainlane stations due to interchange-dominated count locations
-  - Road geometry from TxDOT Top 100 Congested Roadways polyline dataset, San Antonio district
+  - TxDOT AADT Traffic Monitoring Program (2025)
+  - Lane counts from TxDOT Roadway Inventory (2024)
+  - Road geometry from TxDOT Top 100 Congested Roadways polyline dataset
   - Project timelines from Alamo Area MPO FY 2025–2028 TIP and TxDOT San Antonio District project pages
 search_tags: [traffic, congestion, San Antonio, TxDOT, AADT, volume to capacity, IH 35, IH 410, Top 100, transportation]
 ---

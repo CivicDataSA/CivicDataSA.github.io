@@ -4,17 +4,15 @@ title: "San Antonio's Most Congested Corridors"
 description: "Using TxDOT AADT counts, roadway inventory lane data, and Top 100 Congested Roadways geometry, this analysis calculates volume-to-capacity ratios for all 10 San Antonio segments on TxDOT's 2025 Top 100 list and maps where demand exceeds design capacity."
 tag: Transportation
 date: 2026-08-01
-github: https://github.com/CivicDataSA/sa-traffic-capacity
+github: https://github.com/CivicDataSA/TrafficCapacity
 findings:
   - All 10 San Antonio segments on TxDOT's 2025 Top 100 Most Congested Roadways list are over capacity
-  - San Antonio lost 39 million hours to traffic delays in 2025, ranking 10 segments among the state's worst
+  - San Antonio lost 39 million hours to traffic delays in 2025
   - IH 35 carries 54–60% more traffic than it was built for
   - Culebra and Potranco have similar V/C ratios but Culebra ranks far worse on delay
 methods:
   - TxDOT AADT Traffic Monitoring Program (2025)
   - Lane counts from TxDOT Roadway Inventory (2024)
-  - Road geometry from TxDOT Top 100 Congested Roadways polyline dataset
-  - Project timelines from Alamo Area MPO FY 2025–2028 TIP and TxDOT San Antonio District project pages
 search_tags: [traffic, congestion, San Antonio, TxDOT, AADT, volume to capacity, IH 35, IH 410, Top 100, transportation]
 ---
 

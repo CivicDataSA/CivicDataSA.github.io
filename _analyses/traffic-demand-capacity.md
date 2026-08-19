@@ -17,7 +17,7 @@ search_tags: [traffic, congestion, San Antonio, TxDOT, AADT, volume to capacity,
 
 San Antonio placed 10 segments on TxDOT's 2025 Top 100 Most Congested Roadways list, more than any Texas city outside Houston and Dallas-Fort Worth. The list is produced annually by the Texas A&M Transportation Institute using GPS-derived speed data to rank segments by person-hours of delay per mile, a measure of what commuters actually experience. This analysis uses a different metric, volume-to-capacity ratio, to ask a structural question: are these roads carrying more traffic than they were built for, and by how much?
  
-The answer across all 10 segments is yes.
+The answer across all 10 segments is yes, and in most cases by a significant margin.
  
 ## The map and the numbers
  
@@ -100,27 +100,25 @@ The answer across all 10 segments is yes.
  
 IH 35 has three segments on the list, all between 54% and 60% over capacity. The N PanAm segment running northeast from Loop 1604 toward Schertz is the worst at 1.60, carrying 182,704 vehicles per day against a capacity of 114,000. Two TxDOT projects address parts of this corridor: the PanAm Expressway improvements south of Loop 410 (est. 2029) and the I-35 NEX expansion northeast of the city (est. 2030). Neither is imminent.
  
-The IH 410 findings are harder to dismiss. The Connally Loop N segment, which spans the interchange corridor between I-35 and I-10, carries 250,077 vehicles per day, reflecting its role as a connector between two of the city's busiest freeways, and has the highest V/C ratio in the dataset at 1.65. The northwest section is at 1.23. Neither has an active project in the current Alamo Area MPO Transportation Improvement Program through 2028. For commuters on those segments, there is no scheduled relief.
+The Connally Loop N segment, which spans the interchange corridor between I-35 and I-10, carries 250,077 vehicles per day, reflecting its role as a connector between two of the city's busiest freeways, and has the highest V/C ratio in the dataset at 1.65. The northwest section is at 1.23. Neither has an active project in the current Alamo Area MPO Transportation Improvement Program through 2028. For commuters on those segments, there is no scheduled relief.
  
-SL 1604 N and the McDermott Freeway section of IH 10 are in similar positions: over capacity, no active project. The Jose Lopez Freeway section of IH 10 on the west side, at 1.05, is the closest to the edge: just over capacity, with a managed lanes project due in 2027 that may provide relief before conditions worsen further.
+SL 1604 N and the McDermott Freeway section of IH 10 are in similar positions: over capacity, no active project. The Jose Lopez Freeway section of IH 10 on the west side, at 1.05, is just over capacity, with a managed lanes project due in 2027.
+
  
 ## Culebra and Potranco: the same ratio, different experiences
  
 Culebra Road and Potranco Road both have a V/C of 1.23, but they land very differently on TxDOT's own ranking. Culebra is 46th on the Top 100; Potranco is 93rd. The gap reflects delay per mile, which is the ranking's actual metric rather than raw capacity overload.
  
-Potranco is a newer arterial with fewer signals and cross streets. Traffic moves more freely between stops, so the capacity overload doesn't compound into as much lost time per mile. Culebra runs through more developed corridor with heavier signal density, more driveways, and more cross traffic. The structural problem is similar, but Culebra's geometry converts that overload into more lost time per mile. This is the distinction between V/C and delay per mile: one measures what the road was built for relative to what it's asked to carry, the other measures what commuters actually experience.
+Potranco is a newer arterial with fewer signals and cross streets. Traffic moves more freely between stops, so the capacity overload doesn't compound into as much lost time per mile. Culebra runs through more developed corridor with heavier signal density and more cross traffic. The structural problem is similar, but Culebra's geometry converts that overload into more lost time per mile. This is the distinction between V/C and delay per mile: one measures what the road was built for relative to what it's asked to carry, the other measures what commuters actually experience.
  
 ## What expansion doesn't solve
  
 TxDOT's projects on IH 35 and IH 10 will add lanes and managed lane facilities, which reduces delay in the near term. The research on induced demand is consistent, though: new highway capacity attracts new vehicle trips, and congestion typically returns to pre-expansion levels within a few years. A 2030 completion date does not mean a permanently uncongested corridor.
  
-The segments without active projects present a harder problem. IH 410's Connally Loop sections and SL 1604 N are significantly over capacity and absent from the current TIP. For commuters on those roads, the current situation is not a temporary construction phase; it is the foreseeable future.
+The segments without active projects present a harder problem. IH 410's Connally Loop sections and SL 1604 N are significantly over capacity and absent from the current TIP. For commuters on those roads, there is no scheduled relief.
  
 ## A note on methodology
  
 V/C ratios depend on three inputs: traffic volume, lane count, and a capacity assumption per lane. Traffic volumes come from TxDOT AADT count stations matched to each Top 100 segment via nearest-station spatial join; a 50,000 vehicle/day floor was applied for freeway routes to exclude ramp and frontage road stations. Lane counts come from TxDOT Roadway Inventory (2024) KG mainlane roadbed segments, taking the median per route in Bexar County. Freeway capacity is estimated at 19,000 vehicles per lane per day (HCM Level of Service D); arterial capacity at 9,000. These are planning-level approximations; actual capacity varies by grade, interchange spacing, and operating conditions. The Jose Lopez Freeway segment at V/C 1.05 is the closest to the threshold; values near 1.0 carry more uncertainty than values well above it given the margin of error in AADT station placement and lane count assumptions.
  
 IH 410 count stations in Bexar County are heavily concentrated at interchange locations. AADT values for both Connally Loop segments were manually verified using ZLEVEL 8 (mainlane-designated) stations rather than the nearest-station spatial join. The Connally Loop N volume of 250,077 reflects a station at the I-35/I-10 interchange corridor; that volume is real and the congestion is real, but it should be understood as reflecting the combined load of an interchange segment rather than a mid-block mainlane count.
- 
-The Top 100 list uses delay per mile as its ranking metric, not V/C ratio. A road can rank highly on one and not the other. Culebra and Potranco illustrate this directly. V/C describes structural overload; delay per mile describes experienced congestion. Both matter, and neither tells the complete story alone.
- 

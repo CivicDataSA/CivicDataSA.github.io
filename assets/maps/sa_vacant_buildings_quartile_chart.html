@@ -18,7 +18,6 @@
 </head>
 <body>
 <div class="chart-wrap" id="chart"></div>
-<div class="note">n = properties per quartile shown in parentheses</div>
 <script>
 const DATA = [{"label": "Q1 (Low)", "avg": 199.81782945736435, "n": 258, "is_q2": false}, {"label": "Q2", "avg": 230.77021276595744, "n": 235, "is_q2": true}, {"label": "Q3", "avg": 203.22072072072072, "n": 222, "is_q2": false}, {"label": "Q4 (High)", "avg": 210.46835443037975, "n": 237, "is_q2": false}];
 const maxAvg = Math.max(...DATA.map(r => r.avg));

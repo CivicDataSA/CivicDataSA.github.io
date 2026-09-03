@@ -40,7 +40,7 @@ Grouping properties into vulnerability quartiles and comparing days since each p
  
 <!-- QUARTILE CHART EMBED -->
 <div style="border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin:1.5rem 0 0.5rem;">
-  <iframe src="/assets/maps/sa_vacant_buildings_quartile_chart.html" width="100%" height="220" frameborder="0" style="display:block;"></iframe>
+  <iframe src="/assets/maps/sa_vacant_buildings_quartile_chart.html" width="100%" height="180" frameborder="0" style="display:block;"></iframe>
 </div>
 <p style="font-size:0.8rem;color:#888;margin-bottom:2rem;">Average days since last inspection by social vulnerability quartile (Q1 = least vulnerable, Q4 = most vulnerable).</p>
 

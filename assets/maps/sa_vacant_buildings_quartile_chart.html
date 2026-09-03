@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inspection Recency by SVI Quartile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  html,body{margin:0;padding:0;font-family:'Helvetica Neue',Arial,sans-serif;background:#fff;}
+  .chart-wrap{padding:16px 14px 10px;}
+  .bar-row{display:grid;grid-template-columns:88px 1fr 50px;align-items:center;gap:8px;margin-bottom:9px;font-size:13px;}
+  .bar-label{color:#1b2430;font-weight:600;}
+  .bar-track{background:#eee9dd;border-radius:3px;height:18px;position:relative;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:3px 0 0 3px;}
+  .bar-val{text-align:right;color:#888;font-variant-numeric:tabular-nums;font-size:12.5px;}
+  .bar-row.highlight .bar-label{color:#C8102E;}
+  .note{font-size:11px;color:#888;padding:2px 2px 6px;}
+</style>
+</head>
+<body>
+<div class="chart-wrap" id="chart"></div>
+<div class="note">n = properties per quartile shown in parentheses</div>
+<script>
+const DATA = [{"label": "Q1 (Low)", "avg": 199.81782945736435, "n": 258, "is_q2": false}, {"label": "Q2", "avg": 230.77021276595744, "n": 235, "is_q2": true}, {"label": "Q3", "avg": 203.22072072072072, "n": 222, "is_q2": false}, {"label": "Q4 (High)", "avg": 210.46835443037975, "n": 237, "is_q2": false}];
+const maxAvg = Math.max(...DATA.map(r => r.avg));
+const html = DATA.map(r => {
+  const pct = (r.avg / maxAvg) * 100;
+  const fill = r.is_q2 ? '#C8102E' : '#00558C';
+  return `
+    <div class="bar-row ${r.is_q2 ? 'highlight' : ''}">
+      <div class="bar-label">${r.label}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${fill}"></div></div>
+      <div class="bar-val">${Math.round(r.avg)}d</div>
+    </div>`;
+}).join('');
+document.getElementById('chart').innerHTML = html;
+</script>
+</body>
+</html>

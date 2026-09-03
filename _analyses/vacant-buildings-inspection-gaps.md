@@ -6,7 +6,7 @@ tag: Housing
 date: 2026-09-03
 github: https://github.com/CivicDataSA/VacantBuildings
 findings:
-  - Named overlay zones don't track vulnerability — properties outside them are slightly more vulnerable, not less
+  - Named overlay zones don't track vulnerability — properties outside them are slightly more vulnerable
   - Inspection recency differs significantly by vulnerability quartile, but non-linearly
   - The gap traces to a single 2025 inspection sweep in District 2, never followed up on
 methods:
@@ -16,9 +16,9 @@ methods:
 search_tags: [vacant buildings, code enforcement, San Antonio, Bexar County, social vulnerability index, SVI, housing, District 2, inspection]
 ---
 
-Vacant buildings carry real risks for the surrounding neighborhood: fire, pest problems, falling property values for neighbors, and sites for dumping or unauthorized entry. Registries like San Antonio's [Vacant Building Program](https://www.sa.gov/Directory/Departments/DSD/CES/Vacant-Buildings) exist to make sure these properties are tracked and revisited over time, not just identified once. Whether that follow-through is actually happening is the question this analysis checks.
+Vacant buildings carry real risks for the surrounding neighborhood: fire, pest problems, falling property values for neighbors, and sites for dumping or unauthorized entry. Registries like San Antonio's [Vacant Building Program](https://www.sa.gov/Directory/Departments/DSD/CES/Vacant-Buildings) exist to make sure these properties are tracked and revisited over time, not just identified once. This analysis checks whether that follow-through is actually happening.
 
-In 2026, San Antonio City Council members raised concerns about the city's Vacant Building Program, including a [call for better public-facing tools](https://sanantonioreport.org/san-antonio-city-council-owners-vacant-nuisance-buildings/) to track vacant and problem properties. This analysis uses the city's own open data to ask two questions: does the program's zone-based structure line up with social vulnerability, and are some vacant properties going longer without inspection than others?
+In 2026, San Antonio City Council members raised concerns about the city's Vacant Building Program. Councilwoman Adriana Rocha Garcia specifically [called for a public-facing tool](https://sanantonioreport.org/san-antonio-city-council-owners-vacant-nuisance-buildings/) overlaying property status, zoning, and crime data for residents. This analysis uses the city's own open data to ask two questions: does the program's zone-based structure line up with social vulnerability, and are some vacant properties going longer without inspection than others?
 
 The dataset covers 1,019 properties from the city's Vacant Building Program. About 11% lacked coordinates and were geocoded via the Census Bureau's batch geocoder; after excluding addresses that failed to geocode or fell outside Bexar County, the final analysis set covers 988 properties, or about 97% of the original list.
 
@@ -36,7 +36,15 @@ In other words, the zone system isn't calibrated to social vulnerability. It's b
 
 ## Inspection recency varies significantly, but not in a simple pattern
 
-Grouping properties into vulnerability quartiles and comparing days since each property's last inspection shows a statistically significant difference across groups (Kruskal-Wallis test, p = 0.0056). But the pattern isn't linear: the second-lowest vulnerability quartile (Q2) has the longest average gap since inspection at 231 days, notably higher than both the least vulnerable group (200 days) and the most vulnerable group (210 days).
+Grouping properties into vulnerability quartiles and comparing days since each property's last inspection shows a statistically significant difference across groups (Kruskal-Wallis test, p = 0.0056), but not a straight line from least to most vulnerable. The second-lowest vulnerability quartile (Q2) has the longest average gap at 231 days.
+ 
+<!-- QUARTILE CHART EMBED -->
+<div style="border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin:1.5rem 0 0.5rem;">
+  <iframe src="/assets/maps/sa_vacant_buildings_quartile_chart.html" width="100%" height="220" frameborder="0" style="display:block;"></iframe>
+</div>
+<p style="font-size:0.8rem;color:#888;margin-bottom:2rem;">Average days since last inspection by social vulnerability quartile (Q1 = least vulnerable, Q4 = most vulnerable).</p>
+
+Q2's elevated average isn't spread evenly, though. The chart below breaks Q2 down by council district.
 
 <!-- CHART EMBED -->
 <div style="border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin:1.5rem 0 0.5rem;">
@@ -65,7 +73,8 @@ City Council has already called for a public-facing tool that overlays vacant bu
 - **A linked, bulk-exportable complaint and enforcement record.** The city's [Accela-based code enforcement search](https://aca.sanantonio.gov/CitizenAccess/Default.aspx) returns individual complaint records with a filed date and status, but not a resolution or closed date, and only through a one-at-a-time or full-export search, not a documented bulk API. A published dataset joining complaint records to specific properties, with both open and close timestamps, would allow the response-time analysis this project originally set out to do.
 - **A documented reason when a sweep isn't followed up.** Nothing in the data distinguishes a property that's fallen out of the inspection cycle from one that's been deliberately deprioritized (for example, pending litigation or an ownership dispute). Even a simple status flag for "reason not yet reinspected" would remove the guesswork this analysis had to do to rule out other explanations.
 
-None of these are large asks. The Vacant Building Program dataset is already well-structured and publicly available; it's specifically the time dimension, when something happened and when it happened again, that's missing, and that's exactly what turns a property inventory into an enforcement-accountability tool.
+
+None of these are large asks. The Vacant Building Program dataset is already well-structured and publicly available. What's missing is the time dimension: when something happened, and when it happened again. That's specifically what turns a property inventory into an enforcement-accountability tool.
 
 The city already maintains a [vacant building dashboard](https://cosagis.maps.arcgis.com/apps/dashboards/e0cc5ae462d84cce9a216281cf0804a2#) showing current inventory status. As it stands, it doesn't include the violation/citation list, zoning, or crime overlay Rocha Garcia specifically described, which is the gap this analysis is aimed at.
 

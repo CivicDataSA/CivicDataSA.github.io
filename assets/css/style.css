@@ -111,16 +111,6 @@ ul { list-style: none; }
 .analysis-body h2:first-child { margin-top: 0; }
 .analysis-body p { color: var(--ink-muted); margin-bottom: 1rem; }
 
-.analysis-body ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-.analysis-body li {
-  margin-bottom: 0.5rem;
-  color: var(--ink-muted);
-}
-
 /* ── Streamlit embed ── */
 .embed-streamlit { margin: 2rem 0; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
 .embed-streamlit iframe { display: block; }
@@ -213,16 +203,3 @@ ul { list-style: none; }
   border-bottom: none;
 }
 
-/* forcing style for bullets*/
-.analysis-body ul,
-.prose ul,
-article ul {
-  list-style: disc !important;
-  padding-left: 1.5rem !important;
-  margin-bottom: 1rem !important;
-}
-.analysis-body li,
-.prose li,
-article li {
-  margin-bottom: 0.5rem !important;
-}

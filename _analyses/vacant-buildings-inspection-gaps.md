@@ -10,7 +10,7 @@ findings:
   - Inspection recency differs significantly by vulnerability quartile, but non-linearly
   - The gap traces to a single 2025 inspection sweep in District 2, never followed up on
 methods:
-  - CoSA Vacant Building Program (open data)
+  - CoSA Vacant Building Program
   - U.S. Census Bureau TIGER/Line
   - CDC/ATSDR Social Vulnerability Index (2022)
 search_tags: [vacant buildings, code enforcement, San Antonio, Bexar County, social vulnerability index, SVI, housing, District 2, inspection]
@@ -30,7 +30,7 @@ In other words, the zone system isn't calibrated to social vulnerability. It's b
 
 <!-- MAP EMBED -->
 <div style="border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin:1.5rem 0 0.5rem;">
-  <iframe src="/assets/maps/sa_vacant_buildings_map.html" width="100%" height="460" frameborder="0" style="display:block;"></iframe>
+  <iframe src="/assets/maps/sa_vacant_buildings_map.html" width="100%" height="600" frameborder="0" style="display:block;"></iframe>
 </div>
 <p style="font-size:0.8rem;color:#888;margin-bottom:2rem;">Properties colored by days since last inspection or by social vulnerability (toggle above the map). District 2's August 2025 sweep cluster is outlined in red. Base map: CARTO/OpenStreetMap. Source: City of San Antonio Vacant Building Program, CDC/ATSDR SVI 2022.</p>
 

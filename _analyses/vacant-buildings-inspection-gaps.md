@@ -11,7 +11,7 @@ findings:
   - The gap traces to a single 2025 inspection sweep in District 2, never followed up on, across 17 unrelated owners
 methods:
   - City of San Antonio Vacant Building Program (open data)
-  - U.S. Census Bureau TIGER/Line + batch geocoder
+  - U.S. Census Bureau TIGER/Line
   - CDC/ATSDR Social Vulnerability Index (2022)
 search_tags: [vacant buildings, code enforcement, San Antonio, Bexar County, social vulnerability index, SVI, housing, District 2, inspection]
 ---
@@ -24,7 +24,7 @@ The dataset covers 1,019 properties from the city's Vacant Building Program. Abo
 
 ## Named overlay zones don't track vulnerability the way you'd expect
 
-The program flags certain properties as falling within specially designated areas: historic districts, neighborhood conservation districts, TIRZ zones, or military base buffers. Comparing the census-tract SVI scores of properties inside versus outside these named zones shows a small but statistically significant difference (Mann-Whitney U test, p < 0.0001): properties **outside** named zones actually sit in slightly **more** vulnerable tracts (mean SVI 0.83) than properties inside them (mean SVI 0.77).
+The program flags certain properties as falling within specially designated areas: historic districts, neighborhood conservation districts, TIRZ zones, or military base buffers. Comparing the census-tract SVI scores of properties inside versus outside these named zones shows a small but statistically significant difference (Mann-Whitney U test, p < 0.0001): properties outside named zones actually sit in slightly more vulnerable tracts (mean SVI 0.83) than properties inside them (mean SVI 0.77).
 
 In other words, the zone system isn't calibrated to social vulnerability. It's built around historic, planning, and land-use designations that happen to correlate weakly, and in the opposite direction from what a vulnerability-targeting framework would produce.
 
@@ -46,7 +46,7 @@ Grouping properties into vulnerability quartiles and comparing days since each p
 
 ## Tracing it to its source
 
-Rather than stop at a headline statistic, the Q2 pattern was traced to its actual cause:
+The Q2 pattern breaks down as follows:
 
 - **Geography** — nearly 40% of Q2 properties sit in Council District 2, which also has the longest average inspection gap of any district (249 days) among Q2 properties.
 - **Not an administrative backlog** — within District 2, it isn't properties stuck in "Pending" registration status driving the gap. Those actually have shorter inspection gaps (236 days) than fully "Registered" properties (265 days), the opposite of what an administrative-delay explanation would predict.

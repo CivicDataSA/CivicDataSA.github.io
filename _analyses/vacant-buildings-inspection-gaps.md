@@ -8,9 +8,9 @@ github: https://github.com/CivicDataSA/VacantBuildings
 findings:
   - Named overlay zones don't track vulnerability — properties outside them are slightly more vulnerable, not less
   - Inspection recency differs significantly by vulnerability quartile, but non-linearly
-  - The gap traces to a single 2025 inspection sweep in District 2, never followed up on, across 17 unrelated owners
+  - The gap traces to a single 2025 inspection sweep in District 2, never followed up on
 methods:
-  - City of San Antonio Vacant Building Program (open data)
+  - CoSA Vacant Building Program (open data)
   - U.S. Census Bureau TIGER/Line
   - CDC/ATSDR Social Vulnerability Index (2022)
 search_tags: [vacant buildings, code enforcement, San Antonio, Bexar County, social vulnerability index, SVI, housing, District 2, inspection]

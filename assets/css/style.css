@@ -213,3 +213,16 @@ ul { list-style: none; }
   border-bottom: none;
 }
 
+/* forcing style for bullets*/
+.analysis-body ul,
+.prose ul,
+article ul {
+  list-style: disc !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+.analysis-body li,
+.prose li,
+article li {
+  margin-bottom: 0.5rem !important;
+}

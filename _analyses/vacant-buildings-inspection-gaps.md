@@ -40,7 +40,7 @@ Grouping properties into vulnerability quartiles and comparing days since each p
  
 <!-- QUARTILE CHART EMBED -->
 <div style="border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin:1.5rem 0 0.5rem;">
-  <iframe src="/assets/maps/sa_vacant_buildings_quartile_chart.html" width="100%" height="180" frameborder="0" style="display:block;"></iframe>
+  <iframe src="/assets/maps/sa_vacant_buildings_quartile_chart.html" width="100%" height="120" frameborder="0" style="display:block;"></iframe>
 </div>
 <p style="font-size:0.8rem;color:#888;margin-bottom:2rem;">Average days since last inspection by social vulnerability quartile (Q1 = least vulnerable, Q4 = most vulnerable).</p>
 
@@ -56,8 +56,8 @@ Q2's elevated average isn't spread evenly, though. The chart below breaks Q2 dow
 
 The Q2 pattern breaks down as follows:
 
-- **Geography** — nearly 40% of Q2 properties sit in Council District 2, which also has the longest average inspection gap of any district (249 days) among Q2 properties.
-- **Not an administrative backlog** — within District 2, it isn't properties stuck in "Pending" registration status driving the gap. Those actually have shorter inspection gaps (236 days) than fully "Registered" properties (265 days), the opposite of what an administrative-delay explanation would predict.
+-- **Geography** — nearly 40% of Q2 properties sit in Council District 2, which also has the longest average inspection gap of any district (249 days) among Q2 properties.
+-- **Not an administrative backlog** — within District 2, it isn't properties stuck in "Pending" registration status driving the gap. Those actually have shorter inspection gaps (236 days) than fully "Registered" properties (265 days), the opposite of what an administrative-delay explanation would predict.
 - **Not an outlier artifact** — an IQR-based outlier check on the District 2 "Registered" subgroup (51 properties) found zero outliers. The elevated average is a genuine pattern across the group, not a few extreme values skewing the mean.
 - **Not a single-owner issue** — the properties with the longest inspection gaps include a cluster of 17 properties that all share the exact same last-inspection date (August 22, 2025), mostly in the Dignowity Hill area, and have gone unrevisited since. Checking ownership records for these 17 properties found 17 distinct owners with no overlap, ruling out any single landlord's portfolio as the explanation.
 

@@ -48,7 +48,7 @@ Q2's elevated average isn't spread evenly, though. The chart below breaks Q2 dow
 
 <!-- CHART EMBED -->
 <div style="border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin:1.5rem 0 0.5rem;">
-  <iframe src="/assets/maps/sa_vacant_buildings_chart.html" width="100%" height="180" frameborder="0" style="display:block;"></iframe>
+  <iframe src="/assets/maps/sa_vacant_buildings_chart.html" width="100%" height="170" frameborder="0" style="display:block;"></iframe>
 </div>
 <p style="font-size:0.8rem;color:#888;margin-bottom:2rem;">Average days since inspection for Q2 (second-lowest vulnerability quartile) properties, by council district. Districts with fewer than 5 Q2 properties omitted.</p>
 

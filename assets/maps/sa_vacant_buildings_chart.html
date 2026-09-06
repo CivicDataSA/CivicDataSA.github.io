@@ -18,7 +18,7 @@
 <body>
 <div class="chart-wrap" id="chart"></div>
 <script>
-const DATA = [{"district": "2", "avg": 249.06593406593407, "n": 91}, {"district": "5", "avg": 234.76363636363635, "n": 55}, {"district": "7", "avg": 231.25, "n": 8}, {"district": "3", "avg": 225.92857142857142, "n": 14}, {"district": "1", "avg": 206.0983606557377, "n": 61}];
+const DATA = [{"district": "2", "avg": 281.489362}, {"district": "5", "avg": 260.0}, {"district": "3", "avg": 257.933333}, {"district": "7", "avg": 249.428571}, {"district": "1", "avg": 247.338235}];
 const maxAvg = Math.max(...DATA.map(r => r.avg));
 const html = DATA.map(r => {
   const pct = (r.avg / maxAvg) * 100;
